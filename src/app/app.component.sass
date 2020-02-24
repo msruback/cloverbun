@@ -8,3 +8,65 @@ body
   background-color: $primary
   height: 100vh
   width: 100vw
+  overflow: hidden
+
+.title
+  width: fit-content
+  margin: 0
+  color: #fff
+  font-size: 6em
+  font-family: 'Righteous'
+
+.signature
+  @extend .appear
+  float: right
+  font-size: 1.5em
+  color: #fff
+  font-family: 'Damion'
+  animation-delay: 2s
+
+.logo-and-title
+  width: fit-content
+  height: fit-content
+  margin: auto
+  padding: 45vh
+
+.appear
+  animation-name: appear
+  animation-duration: 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+  opacity: 0
+#letter-1
+  @extend .appear
+#letter-2
+  @extend .appear
+  animation-delay: .2s
+#letter-3
+  @extend .appear
+  animation-delay: .4s
+#letter-4
+  @extend .appear
+  animation-delay: .6s
+#letter-5
+  @extend .appear
+  animation-delay: .8s
+#letter-6
+  @extend .appear
+  animation-delay: 1.0s
+#letter-7
+  @extend .appear
+  animation-delay: 1.2s
+#letter-8
+  @extend .appear
+  animation-delay: 1.4s
+#letter-9
+  @extend .appear
+  animation-delay: 1.6s
+
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
