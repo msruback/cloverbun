@@ -1,3 +1,5 @@
+@use '../animations'
+
 $primary: #7eb285
 
 body
@@ -9,31 +11,51 @@ body
   height: 100vh
   width: 100vw
   overflow: hidden
+  animation-name: shrink-nav
+  animation-duration: 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+  animation-delay: 3.5s
 
 .title
-  width: fit-content
   margin: 0
   color: #fff
   font-size: 6em
   font-family: 'Righteous'
+  animation-name: shrink-title
+  animation-duration: 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+  animation-delay: 3.5s
 
 .signature
-  @extend .appear
+  animation-name: appear, signature-disappear
+  animation-duration: 1s, 1s
+  animation-iteration-count: 1, 1
+  animation-fill-mode: forwards, forwards
+  opacity: 0
   float: right
   font-size: 1.5em
   color: #fff
   font-family: 'Damion'
-  animation-delay: 2s
+  animation-delay: 1s, 3.5s
 
 .logo-and-title
+  animation-name: move-title
+  animation-duration: 3s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+  animation-delay: 3.5s
   width: fit-content
   height: fit-content
-  margin: auto
-  padding: 45vh
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
 
 .appear
   animation-name: appear
-  animation-duration: 3s
+  animation-duration: 2s
   animation-iteration-count: 1
   animation-fill-mode: forwards
   opacity: 0
@@ -41,28 +63,28 @@ body
   @extend .appear
 #letter-2
   @extend .appear
-  animation-delay: .2s
+  animation-delay: .1s
 #letter-3
   @extend .appear
-  animation-delay: .4s
+  animation-delay: .2s
 #letter-4
   @extend .appear
-  animation-delay: .6s
+  animation-delay: .3s
 #letter-5
   @extend .appear
-  animation-delay: .8s
+  animation-delay: .4s
 #letter-6
   @extend .appear
-  animation-delay: 1.0s
+  animation-delay: .5s
 #letter-7
   @extend .appear
-  animation-delay: 1.2s
+  animation-delay: .6s
 #letter-8
   @extend .appear
-  animation-delay: 1.4s
+  animation-delay: .7s
 #letter-9
   @extend .appear
-  animation-delay: 1.6s
+  animation-delay: .8s
 
 
 @keyframes appear
